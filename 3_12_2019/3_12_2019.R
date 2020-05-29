@@ -14,6 +14,7 @@ library(ggplot2)
 library(ggmap)
 library(viridis)
 library(broom)
+library(glue)
 
 # Explore Data ------------------------------------------------------------
 dim(tickets)
@@ -30,7 +31,7 @@ tickets <- tickets %>%
 
 # Get geoJSON -------------------------------------------------------------
 # https://www.opendataphilly.org/dataset/zip-codes/resource/825cc9f5-92c2-4b7c-8b4e-6affa41396ee
-data_json <- geojson_read(x = "Zipcodes_Poly.geojson", what = "sp",stringsAsFactors = F)
+data_json <- geojson_read(x = "3_12_2019/Zipcodes_Poly.geojson", what = "sp",stringsAsFactors = F)
 
 plot(data_json)
 
@@ -56,4 +57,7 @@ p <- tidy_json %>%
   scale_fill_viridis(name="Total amount of infringements") +
   coord_map(); p
 
+ggsave(glue("TidyTuesday_3_12_2019.png"), width = 10, height = 6)
+
 # rayshader::plot_gg(p, scale = 50,width = 10, height = 10)
+
