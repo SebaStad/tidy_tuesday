@@ -7,3 +7,4 @@ Contributions so far:
 
 * [Philly Parking Tickets](https://github.com/SebaStad/tidy_tuesday/tree/master/3_12_2019)
 * [Cocktails](https://github.com/SebaStad/tidy_tuesday/tree/master/29_05_2020)
+* [Marble Races](https://github.com/SebaStad/tidy_tuesday/tree/master/02_06_2020)
